@@ -1,0 +1,16 @@
+-   id: pip-freeze
+    name: 'freeze check'
+    entry: freeze-check.sh
+    files: '\.txt$'
+    types: [file]
+    language: 'script'
+    description: "Tries to make sure that you update frozen pip files including the basic requirements.txt"
+    require_serial: true
+-   id: pmd
+    name: 'run pmd'
+    entry: run-pmd.sh
+    files: '\.java$'
+    types: [file]
+    language: 'script'
+    description: "Runs the PMD static code analyzer, requires pmd installed with a command in the PATH (brew install works)"
+    require_serial: true
